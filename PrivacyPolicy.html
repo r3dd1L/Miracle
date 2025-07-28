@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Політика використання | Miracle Support</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0d0d1a, #1a0026);
+      color: #e0e0e0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    header {
+      background: #14002b;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #d946ef;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .rule {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .rule i {
+      margin-top: 0.3rem;
+      min-width: 20px;
+    }
+
+    .rule i.red { color: #ef4444; }
+    .rule i.yellow { color: #facc15; }
+    .rule i.blue { color: #3b82f6; }
+    .rule i.purple { color: #a855f7; }
+    .rule i.pink { color: #d946ef; }
+
+    .footer {
+      text-align: center;
+      background: #0b001a;
+      padding: 1.5rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #6b21a8;
+      margin-top: 4rem;
+    }
+
+    .footer a {
+      color: #d946ef;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .notice {
+      text-align: center;
+      font-style: italic;
+      color: #999;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📄 Політика використання</h1>
+    <p>@Miracle_SupportBot</p>
+  </header>
+
+  <main>
+    <div class="rule"><i class="fas fa-shield-alt red"></i> Цей бот призначений виключно для звернень до технічної підтримки проекту <strong>Miracle</strong>.</div>
+    <div class="rule"><i class="fas fa-exclamation-triangle yellow"></i> Заборонено надсилати спам, образливі повідомлення або контент, що порушує правила Telegram.</div>
+    <div class="rule"><i class="fas fa-clock blue"></i> Відповіді на звернення надаються у порядку черги. Будь ласка, поставтесь із розумінням.</div>
+    <div class="rule"><i class="fas fa-lock purple"></i> Уся надана вами інформація використовується лише для обробки звернення і не передається третім особам.</div>
+    <div class="rule"><i class="fas fa-ban red"></i> У разі зловживань доступ до бота може бути обмежено або заблоковано.</div>
+    <div class="rule"><i class="fas fa-sync-alt pink"></i> Проект Miracle залишає за собою право оновлювати цю політику без попередження.</div>
+
+    <div class="notice">Використовуючи цього бота, ви автоматично погоджуєтесь з даними умовами.</div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Miracle. Усі права захищено.</p>
+    <p> <a href="https://t.me/Miracle_SupportBot" target="_blank">Зв'язатися з нами!</a></p>
+  </footer>
+
+  <script>
+    document.getElementById(\"year\").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
