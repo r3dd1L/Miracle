@@ -1,121 +1,407 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Політика використання | Miracle Support</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #0d0d1a, #1a0026);
-      color: #e0e0e0;
-      animation: fadeIn 1s ease forwards;
-    }
-
-    header {
-      background: #14002b;
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #d946ef;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #bbb;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .rule {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-
-    .rule i {
-      margin-top: 0.3rem;
-      min-width: 20px;
-    }
-
-    .rule i.red { color: #ef4444; }
-    .rule i.yellow { color: #facc15; }
-    .rule i.blue { color: #3b82f6; }
-    .rule i.purple { color: #a855f7; }
-    .rule i.pink { color: #d946ef; }
-
-    .footer {
-      text-align: center;
-      background: #0b001a;
-      padding: 1.5rem 1rem;
-      color: #888;
-      font-size: 0.9rem;
-      border-top: 1px solid #6b21a8;
-      margin-top: 4rem;
-    }
-
-    .footer a {
-      color: #d946ef;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    .notice {
-      text-align: center;
-      font-style: italic;
-      color: #999;
-      margin-top: 2rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Політика використання - Miracle Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4d9e;
+            --secondary: #a855f7;
+            --tertiary: #6366f1;
+            --light: #fae8ff;
+            --dark: #1e1b4b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comfortaa', cursive;
+            background: linear-gradient(135deg, var(--light), #fff);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--tertiary));
+            color: white;
+            padding: 60px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: linear-gradient(45deg, #fff, #f0abfc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: bounce 2s infinite;
+        }
+        
+        .bot-name {
+            font-weight: 700;
+            color: white;
+        }
+        
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rise 15s infinite ease-in;
+        }
+        
+        .bubble:nth-child(1) {
+            width: 40px;
+            height: 40px;
+            left: 10%;
+            animation-duration: 8s;
+        }
+        
+        .bubble:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 35%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            animation-duration: 11s;
+            animation-delay: 0s;
+        }
+        
+        .bubble:nth-child(5) {
+            width: 35px;
+            height: 35px;
+            left: 55%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+        
+        section {
+            padding: 40px 0;
+            background-color: white;
+            margin: -40px 20px 0;
+            border-radius: 20px;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--secondary);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--tertiary));
+            border-radius: 3px;
+        }
+        
+        .rule {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .rule.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .rule i {
+            margin-top: 0.3rem;
+            font-size: 1.3rem;
+            min-width: 30px;
+        }
+        
+        .rule i.red { color: #ef4444; }
+        .rule i.yellow { color: #facc15; }
+        .rule i.blue { color: #3b82f6; }
+        .rule i.purple { color: #a855f7; }
+        .rule i.pink { color: #d946ef; }
+        
+        .rule-content {
+            flex: 1;
+        }
+        
+        .rule strong {
+            color: var(--tertiary);
+        }
+        
+        .notice {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 2rem;
+            padding: 0 20px;
+        }
+        
+        footer {
+            background: linear-gradient(90deg, var(--dark), #312e81);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .bot-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .bot-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bot-link i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(200px);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 3rem;
+            }
+            
+            section {
+                margin: -40px 10px 0;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .rule {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>📄 Політика використання</h1>
-    <p>@Miracle_SupportBot</p>
-  </header>
-
-  <main>
-    <div class="rule"><i class="fas fa-shield-alt red"></i> Цей бот призначений виключно для звернень до технічної підтримки проекту <strong>Miracle</strong>.</div>
-    <div class="rule"><i class="fas fa-exclamation-triangle yellow"></i> Заборонено надсилати спам, образливі повідомлення або контент, що порушує правила Telegram.</div>
-    <div class="rule"><i class="fas fa-clock blue"></i> Відповіді на звернення надаються у порядку черги. Будь ласка, поставтесь із розумінням.</div>
-    <div class="rule"><i class="fas fa-lock purple"></i> Уся надана вами інформація використовується лише для обробки звернення і не передається третім особам.</div>
-    <div class="rule"><i class="fas fa-ban red"></i> У разі зловживань доступ до бота може бути обмежено або заблоковано.</div>
-    <div class="rule"><i class="fas fa-sync-alt pink"></i> Проект Miracle залишає за собою право оновлювати цю політику без попередження.</div>
-
-    <div class="notice">Використовуючи цього бота, ви автоматично погоджуєтесь з даними умовами.</div>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> Miracle. Усі права захищено.</p>
-    <p> <a href="https://t.me/Miracle_SupportBot" target="_blank">Зв'язатися з нами!</a></p>
-  </footer>
-
-  <script>
-    document.getElementById(\"year\").textContent = new Date().getFullYear();
-  </script>
-
+    <header>
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h1>Політика використання <span class="bot-name">Miracle Support</span></h1>
+            <p>Офіційні правила та умови використання нашого бота підтримки</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section>
+            <h2>Основні правила</h2>
+            
+            <div class="rule">
+                <i class="fas fa-shield-alt red"></i>
+                <div class="rule-content">Цей бот призначений виключно для звернень до технічної підтримки проекту <strong>Miracle</strong>.</div>
+            </div>
+            
+            <div class="rule">
+                <i class="fas fa-exclamation-triangle yellow"></i>
+                <div class="rule-content">Заборонено надсилати спам, образливі повідомлення або контент, що порушує правила Telegram.</div>
+            </div>
+            
+            <div class="rule">
+                <i class="fas fa-clock blue"></i>
+                <div class="rule-content">Відповіді на звернення надаються у порядку черги. Будь ласка, поставтесь із розумінням.</div>
+            </div>
+            
+            <div class="rule">
+                <i class="fas fa-lock purple"></i>
+                <div class="rule-content">Уся надана вами інформація використовується лише для обробки звернення і не передається третім особам.</div>
+            </div>
+            
+            <div class="rule">
+                <i class="fas fa-ban red"></i>
+                <div class="rule-content">У разі зловживань доступ до бота може бути обмежено або заблоковано.</div>
+            </div>
+            
+            <div class="rule">
+                <i class="fas fa-sync-alt pink"></i>
+                <div class="rule-content">Проект Miracle залишає за собою право оновлювати цю політику без попередження.</div>
+            </div>
+            
+            <div class="notice">Використовуючи цього бота, ви автоматично погоджуєтесь з даними умовами.</div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <a href="https://t.me/Miracle_SupportBot" class="bot-link">
+                <i class="fab fa-telegram"></i> Зв'язатися з підтримкою
+            </a>
+            
+            <p class="copyright">© <span id="year"></span> Miracle Support. Усі права захищені.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Анімація появу елементів при скролі
+        document.addEventListener('DOMContentLoaded', function() {
+            const rules = document.querySelectorAll('.rule');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            rules.forEach(rule => {
+                observer.observe(rule);
+            });
+            
+            // Встановлення поточного року
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
